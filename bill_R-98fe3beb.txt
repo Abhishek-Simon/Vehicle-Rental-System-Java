@@ -1,0 +1,13 @@
+===== VEHICLE RENTAL BILL =====
+Rental ID: R-98fe3beb
+Vehicle ID: V-78b60cfd
+Customer ID: C-1ff86fde
+Rent Date: 2025-11-10
+Expected Return Date: 2025-11-15
+Total Amount: ₹2400.00
+Status: ONGOING
+
+----- VEHICLE DETAILS -----
+V-78b60cfd | Hero Splendor (BIKES) - RENTED - ₹400.0/day
+----- CUSTOMER DETAILS -----
+C-1ff86fde | abhishek | 1234567890 | License: ksadjflkasjf

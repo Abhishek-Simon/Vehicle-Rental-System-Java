@@ -1,0 +1,8 @@
+=== VEHICLE RENTAL SUMMARY REPORT ===
+Total vehicles: 6
+Total customers: 3
+Total rentals: 1
+Total earnings: ₹2400.00
+
+---- RENTALS DETAIL ----
+R-98fe3beb | Vehicle:V-78b60cfd | Customer:C-1ff86fde | Rent:2025-11-10 | ExpectedReturn:2025-11-15 | Amount: ₹2400.0 | ONGOING
