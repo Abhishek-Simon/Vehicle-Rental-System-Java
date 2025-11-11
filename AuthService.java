@@ -10,12 +10,12 @@ public class AuthService {
         loadUsers();
     }
 
-    /* -------------------- File Handling -------------------- */
+   
     private void loadUsers() {
         users.clear();
         File file = new File(USER_FILE);
         if (!file.exists()) {
-            // Add a default admin user on first run
+            
             users.put("admin", "admin123");
             saveUsers();
             return;
@@ -43,14 +43,14 @@ public class AuthService {
         }
     }
 
-    /* -------------------- Authentication -------------------- */
+   
     public boolean authenticate(String username, String password) {
         return users.containsKey(username) && users.get(username).equals(password);
     }
 
     public boolean addUser(String username, String password) {
         if (users.containsKey(username)) {
-            return false; // already exists
+            return false; 
         }
         users.put(username, password);
         saveUsers();
@@ -70,7 +70,7 @@ public class AuthService {
         return new ArrayList<>(users.keySet());
     }
 
-    /* -------------------- Login & Signup Logic -------------------- */
+   
     public String loginOrSignup() {
         Scanner sc = new Scanner(System.in);
         while (true) {

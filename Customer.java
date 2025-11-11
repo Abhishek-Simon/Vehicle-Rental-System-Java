@@ -18,14 +18,14 @@ public class Customer implements Serializable {
         this.address = address;
     }
 
-    // getters
+    
     public String getCustomerId() { return customerId; }
     public String getName() { return name; }
     public String getPhone() { return phone; }
     public String getLicenseNo() { return licenseNo; }
     public String getAddress() { return address; }
 
-    // setters
+    
     public void setName(String name) { this.name = name; }
     public void setPhone(String phone) { this.phone = phone; }
     public void setLicenseNo(String licenseNo) { this.licenseNo = licenseNo; }

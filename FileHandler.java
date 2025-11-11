@@ -2,9 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Generic file handler for reading/writing lists of serializable objects.
- */
+
 public class FileHandler {
 
     public static <T> void saveList(List<T> list, String fileName) {
@@ -30,9 +28,7 @@ public class FileHandler {
         }
     }
 
-    /**
-     * Save simple text lines (used for credentials).
-     */
+    
     public static void saveTextLines(List<String> lines, String fileName) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(fileName))) {
             for (String l : lines) pw.println(l);

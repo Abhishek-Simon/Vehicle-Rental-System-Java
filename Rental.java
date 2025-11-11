@@ -11,8 +11,8 @@ public class Rental implements Serializable {
     private String customerId;
     private LocalDate rentDate;
     private LocalDate returnDateExpected;
-    private LocalDate actualReturnDate; // null until returned
-    private double totalAmount; // calculated at rent time or on return
+    private LocalDate actualReturnDate; 
+    private double totalAmount; 
     private boolean isReturned;
 
     public Rental(String vehicleId, String customerId, LocalDate rentDate, LocalDate returnDateExpected, double totalAmount) {
@@ -26,7 +26,7 @@ public class Rental implements Serializable {
         this.actualReturnDate = null;
     }
 
-    // getters & setters
+    
     public String getRentalId() { return rentalId; }
     public String getVehicleId() { return vehicleId; }
     public String getCustomerId() { return customerId; }
@@ -44,7 +44,7 @@ public class Rental implements Serializable {
 
     public long daysRented() {
         LocalDate to = isReturned && actualReturnDate != null ? actualReturnDate : LocalDate.now();
-        return ChronoUnit.DAYS.between(rentDate, to) + 1; // inclusive
+        return ChronoUnit.DAYS.between(rentDate, to) + 1; 
     }
 
     public void displayShort() {

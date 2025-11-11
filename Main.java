@@ -9,16 +9,16 @@ public class Main {
     private static RentalService rentalService = new RentalService(vehicleService, customerService);
 
     public static void main(String[] args) {
-        // Seed sample data (for demo)
+        
         vehicleService.seedSampleDataIfEmpty();
         customerService.seedSampleIfEmpty();
 
         System.out.println("=== Vehicle Rental System (Core Java + File Handling) ===");
 
-        // Authentication (Login / Signup)
+        
         String currentUser = authService.loginOrSignup();
 
-        // Once logged in, go to main menu
+        
         mainMenu(currentUser);
     }
 
@@ -40,14 +40,14 @@ public class Main {
                 case 5 -> adminMenu();
                 case 0 -> {
                     System.out.println("Logging out... See you soon, " + currentUser + "!");
-                    return; // go back to login/signup
+                    return; 
                 }
                 default -> System.out.println("Invalid choice.");
             }
         }
     }
 
-    /* ---------- Vehicle Management ---------- */
+   
     private static void vehicleManagementMenu() {
         while (true) {
             System.out.println("\n--- VEHICLE MANAGEMENT ---");
@@ -163,7 +163,7 @@ public class Main {
         }
     }
 
-    /* ---------- Customer Management ---------- */
+   
     private static void customerManagementMenu() {
         while (true) {
             System.out.println("\n--- CUSTOMER MANAGEMENT ---");
@@ -232,7 +232,7 @@ public class Main {
         }
     }
 
-    /* ---------- Rental Processing ---------- */
+   
     private static void rentalProcessingMenu() {
         while (true) {
             System.out.println("\n--- RENTAL PROCESSING ---");
@@ -311,7 +311,7 @@ public class Main {
         for (Rental r : rentalService.listAll()) r.displayShort();
     }
 
-    /* ---------- Billing & Reports ---------- */
+   
     private static void billingAndReportsMenu() {
         while (true) {
             System.out.println("\n--- BILLING & REPORTS ---");
@@ -376,7 +376,7 @@ public class Main {
         }
     }
 
-    /* ---------- Admin (users) ---------- */
+   
     private static void adminMenu() {
         while (true) {
             System.out.println("\n--- ADMIN MENU ---");

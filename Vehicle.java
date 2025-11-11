@@ -10,7 +10,7 @@ public class Vehicle implements Serializable {
     private Category category;
     private double rentPerDay;
     private boolean isAvailable;
-    private String extraInfo; // e.g., seats or engine capacity stored as text
+    private String extraInfo; 
 
     public Vehicle(String brand, String model, Category category, double rentPerDay, String extraInfo) {
         this.vehicleId = "V-" + UUID.randomUUID().toString().substring(0, 8);
@@ -22,7 +22,7 @@ public class Vehicle implements Serializable {
         this.extraInfo = extraInfo;
     }
 
-    // getters and setters
+    
     public String getVehicleId() { return vehicleId; }
     public String getBrand() { return brand; }
     public String getModel() { return model; }

@@ -12,7 +12,7 @@ public class RentalService {
     private VehicleService vehicleService;
     private CustomerService customerService;
 
-    // fine per extra day (fixed); you can adjust or make dynamic
+    
     private static final double LATE_FEE_PER_DAY = 500.0;
 
     public RentalService(VehicleService vs, CustomerService cs) {
@@ -48,7 +48,7 @@ public class RentalService {
         if (r == null || r.isReturned()) return false;
         Vehicle v = vehicleService.findById(r.getVehicleId());
         if (v == null) return false;
-        // compute extra days
+        
         long expectedDays = ChronoUnit.DAYS.between(r.getRentDate(), r.getReturnDateExpected()) + 1;
         long actualDays = ChronoUnit.DAYS.between(r.getRentDate(), actualReturnDate) + 1;
         double extra = 0.0;
@@ -81,7 +81,7 @@ public class RentalService {
     }
 
     private void generateBillFile(Rental r) {
-        // create a human-readable bill file named bill_<rentalId>.txt
+        
         String fileName = "bill_" + r.getRentalId() + ".txt";
         try (PrintWriter pw = new PrintWriter(new FileWriter(new File(fileName)))) {
             pw.println("===== VEHICLE RENTAL BILL =====");
